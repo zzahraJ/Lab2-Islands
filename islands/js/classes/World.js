@@ -12,14 +12,14 @@ export default class World {
     hookEvents() {
       // hook events like clicking buttons to a specific function
       document.querySelector("#btnAddIsland").addEventListener("click", (e) => {
-          this.add();
+        this.add();
     });
       document.querySelector("#btnSave").addEventListener("click", (e) => {
-          this.save();
+        this.save();
         
       });
       document.querySelector("#btnLoad").addEventListener("click", (e) => {
-          this.load();
+        this.load();
       });
   }
   
@@ -45,8 +45,6 @@ export default class World {
         document.body.appendChild(div);
         this.move(div);        
       });
-
-      
     }
     
     getCoords() {
@@ -71,13 +69,10 @@ export default class World {
       document.body.appendChild(element);
       this.move(element);
       
-      // Push the island as an object with color and name properties into this.islands
       this.islands.push({ color, name });
     }
   
     move(element) {
-      // this might be a good point to animate the islands with JS Animations API
-      
       let coords = this.getCoords();
       //use js web animations api to animate island to coords
          element.animate([
