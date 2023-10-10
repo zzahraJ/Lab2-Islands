@@ -39,8 +39,8 @@ body {
 }
 
 .btn {
-  background-color: red;
-  color: white;
+  background-color: lavender;
+  color: black;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   padding: 2em;
@@ -50,9 +50,9 @@ body {
 }
 
 #btnSave {
-  background-color: green;
+  background-color: lightblue;
 }
 
 #btnLoad {
-  background-color: blue;
+  background-color: plum;
 }
