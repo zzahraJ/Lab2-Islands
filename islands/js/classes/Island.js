@@ -32,45 +32,45 @@ export default class Island {
     return names[Math.floor(Math.random() * names.length)];
   }
 
-  // constructor(name) {
-  //   this.name = name || this.getRandomName();
-  //   this.coordinates = this.getCoords();
-  //   this.color = this.getRandomColor();
-  // }
+  constructor(name) {
+    this.name = name || this.getRandomName();
+    this.coordinates = this.getCoords();
+    this.color = this.getRandomColor();
+  }
 
-  // render(){
-  //   // create a new element
-  //   let div = document.createElement("div");
+  render(){
+    // create a new element
+    let div = document.createElement("div");
     
-  //   // add the island class to the element
-  //   div.classList.add("island");
+    // add the island class to the element
+    div.classList.add("island");
     
-  //   // set the background color of the element
-  //   div.style.backgroundColor = this.getRandomColor();
+    // set the background color of the element
+    div.style.backgroundColor = this.getRandomColor();
 
-  //   let element = document.createElement("div");
-  //   element.classList.add("island-name");
-  //   element.innerHTML = this.name;
-  //   div.appendChild(element);
+    let element = document.createElement("div");
+    element.classList.add("island-name");
+    element.innerHTML = this.name;
+    div.appendChild(element);
 
-  //   // set the coordinates of the element
+    // set the coordinates of the element
 
-  //   document.body.appendChild(div);
-  //   let coords = this.getCoordinates();
-  //   div.animate([
-  //     { transform: `translate(0px, 0px)` },
-  //     { transform: `translate(${coords.x}px, ${coords.y}px)` }
-  //   ], {
-  //     duration: 1000,
-  //     iterations: 1,
-  //     fill: "forwards"
-  //   });
-  // }
-  // JSON() {
-  //   return {
-  //     name: this.name,
-  //     coordinates: this.coordinates,
-  //     color: this.color
-  //   };
-  // }
+    document.body.appendChild(div);
+    let coords = this.getCoordinates();
+    div.animate([
+      { transform: `translate(0px, 0px)` },
+      { transform: `translate(${coords.x}px, ${coords.y}px)` }
+    ], {
+      duration: 1000,
+      iterations: 1,
+      fill: "forwards"
+    });
+  }
+  JSON() {
+    return {
+      name: this.name,
+      coordinates: this.coordinates,
+      color: this.color
+    };
+  }
 }
