@@ -1,8 +1,12 @@
 // kickstart your world here
 import '../style.css';
 
-// Importing the class App 
-import World from './classes/World.js';
-
-
-let world = new World();
+// Dynamisch importeren van de class App
+import('./classes/World.js')
+  .then(({ default: World }) => {
+    const world = new World();
+  })
+  .catch(error => {
+    // Behandel eventuele importfouten
+    console.error(error);
+  });
